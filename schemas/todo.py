@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class TodoBase(BaseModel):
     title: str
     description: str | None = None
-    # done: bool = False
+    done: bool = False
 
 
 class TodoCreate(TodoBase):

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from .config import Base
 
 class Todo(Base):
@@ -7,3 +7,4 @@ class Todo(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String, index=True)
     description  = Column(String, nullable=True)
+    done = Column(Boolean, default=False)
